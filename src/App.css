@@ -14,7 +14,7 @@
   list-style-type: none !important;
   text-decoration: none !important;
   font-family: "Poppins", system-ui;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   /* font-family: "poppins"; */
 
   text-decoration: none;
@@ -74,3 +74,14 @@ small{
 }
 
 
+
+
+/* ======== HERO SECTION======== */
+.hero .nav-link{
+  display: block !important;
+  padding: 4px 0px;
+}
+
+.hero-banner {
+  height: 100%;
+}
