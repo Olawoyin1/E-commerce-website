@@ -6,7 +6,7 @@ const Hero = () => {
         <div className="container2">
             <div className="row m-0">
                 <div className="col-md-3 p-0">
-                    <ul className='p-0 m-0'>
+                    <ul className='p-0 m-0 mt-3'>
                         <li><a className='nav-link siderbar-link' href="/">Woman's Fashion</a></li>
                         <li><a className='nav-link siderbar-link' href="/">Men's Fashion</a></li>
                         <li><a className='nav-link siderbar-link' href="/">Electronics</a></li>
@@ -17,7 +17,7 @@ const Hero = () => {
                         <li><a className='nav-link siderbar-link' href="/">Health & Beauty</a></li>
                     </ul>
                 </div>
-                <div className="col-md-9 hero-right">
+                <div className="col-md-9 mt-3">
                     <div className="hero-banner bg-dark">
 
                     </div>

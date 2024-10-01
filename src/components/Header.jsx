@@ -1,4 +1,7 @@
 import React from 'react'
+import { CiHeart } from "react-icons/ci";
+import { CiShoppingCart } from "react-icons/ci";
+import { CiSearch } from "react-icons/ci";
 
 const Header = () => {
   return (
@@ -17,12 +20,13 @@ const Header = () => {
                     <li><a className='nav-link' href="/about">About</a></li>
                     <li><a className='nav-link' href="/signup">Signup</a></li>
                 </ul>
-                <div className="others d-flex align-item-center ">
-                    <form action="" className='m-0'>
+                <div className="others d-flex align-items-center gap-2">
+                    <form action="" className='header-search m-0'>
                         <input type="text" />
+                        <CiSearch className='icon' />
                     </form>
-                    <small>likes</small>
-                    <small>carts</small>
+                    <CiHeart size={20} />
+                    <CiShoppingCart size={20} />
                 </div>
             </nav>
         </div>
