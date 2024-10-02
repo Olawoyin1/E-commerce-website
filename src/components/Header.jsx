@@ -14,14 +14,14 @@ const Header = () => {
             <nav className='navbar m-0'>
 
                 <h3 className='fw-bold'>Exclusive</h3>
-                <ul className='d-flex align-items-center gap-3 m-0 p-0'>
+                <ul className='d-none d-md-flex align-items-center gap-3 m-0 p-0'>
                     <li><a className='nav-link' href="/">Home</a></li>
                     <li><a className='nav-link' href="/contact">Contact</a></li>
                     <li><a className='nav-link' href="/about">About</a></li>
                     <li><a className='nav-link' href="/signup">Signup</a></li>
                 </ul>
                 <div className="others d-flex align-items-center gap-2">
-                    <form action="" className='header-search m-0'>
+                    <form action="" className='d-sm-block d-none header-search m-0'>
                         <input type="text" />
                         <CiSearch className='icon' />
                     </form>

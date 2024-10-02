@@ -32,13 +32,29 @@ img{
 
 button{
   border: none;
-  width: 100%;
-  /* font-size: smaller !important; */
-  /* padding: 7px 10px; */
-  display: block;
   outline: none !important;
 }
 
+button.add-to-cart{
+  width: 100%;
+}
+
+.main-btn{
+  background-color: #db4444;
+  color: #ffffff;
+  padding: 7px 10px;
+  font-size: 13px !important;
+}
+
+.buy-btn{
+  padding: 7px 10px;
+
+}
+
+.coloured{
+  color: #db4444;
+  font-weight: 700;
+}
 
 
 
@@ -104,7 +120,7 @@ header {
 
 
 .hero-banner {
-  height: 100%;
+  min-height: 100%;
 }
 
 .sidebar{
@@ -192,4 +208,40 @@ header {
 .item-image:hover .add-to-cart{
   display: block !important;;
   transition: all 400ms ease-in-out;
+}
+
+
+
+
+/* ========Quick product section ======== */
+.time-box{
+  width: 3.8rem;
+  height: 3.8rem;
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 50%; */
+}
+
+.time-box small{
+  font-size: 10px !important;
+}
+
+.q-details h1{
+  /* max-width: 97%; */
+}
+
+
+
+@media (max-width: 768px) {
+  .container2{
+    max-width: 90% !important;
+  }
+
+  .q-details h1{
+    max-width: 100%;
+  }
 }
