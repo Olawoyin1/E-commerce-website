@@ -4,7 +4,14 @@ const Quick = () => {
   return (
     <div className='quick my-4'>
         <div className="container2">
-            <div className="d-flex  align-items-center flex-column flex-md-row quick-box bg-dark text-white p-4">
+
+            <div className="cat">
+                <small className="ms-4 fw-bold cat-label">Featured</small>
+            </div>
+            <h3 className="fw-bold mt-3">New Arrival</h3>
+
+
+            <div className="d-flex mt-4 align-items-center flex-column flex-md-row quick-box bg-dark text-white p-4">
                 <div className="q-details d-flex align-items-center align-items-md-start justify-content-center justify-content-md-start flex-column text-center text-md-start gap-4  text-white p-4">
                     <small className='coloured'>Categories</small>
                     <h1 className="fw-bold">Enhance Your Music Experience</h1>

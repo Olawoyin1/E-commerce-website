@@ -230,9 +230,7 @@ header {
   font-size: 10px !important;
 }
 
-.q-details h1{
-  /* max-width: 97%; */
-}
+
 
 
 
@@ -241,7 +239,5 @@ header {
     max-width: 90% !important;
   }
 
-  .q-details h1{
-    max-width: 100%;
-  }
+  
 }

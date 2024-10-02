@@ -4,6 +4,8 @@ import "../node_modules/bootstrap/dist/js/bootstrap.js";
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import Home from './Pages/Home.jsx';
 import SharedLayout from './components/SharedLayout.js';
+import Login from './Pages/Login.jsx';
+import Signup from './Pages/Signup.jsx';
 
 
 const main = createBrowserRouter(
@@ -12,9 +14,9 @@ const main = createBrowserRouter(
       <Route index element={<Home />} />
 
       {/* <Route path="author" element={<Author />} />
-      <Route path="sign-up" element={<Register />} />
-      <Route path="register" element={<Register />} />
-      <Route path="login" element={<Login />} /> */}
+      <Route path="sign-up" element={<Register />} /> */}
+      <Route path="signup" element={<Signup />} />
+      <Route path="login" element={<Login />} />
       
       {/* <Route path="posts" element={<BlogLayout />}>
         <Route
