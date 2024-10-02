@@ -267,5 +267,11 @@ header {
     max-width: 90% !important;
   }
 
+  .slick-slide .hero-slide{
+    /* height: 100%; */
+    min-height: 590px;
+    overflow: hidden;
+  }
+  
   
 }

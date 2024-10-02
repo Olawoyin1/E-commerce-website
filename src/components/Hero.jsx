@@ -121,34 +121,7 @@ const Hero = () => {
                                     </div>
                                 </div>
 
-                                <div className="d-flex align-items-center flex-column flex-md-row hero-slide bg-black text-white p-2">
-                                    <div className="q-details d-flex align-items-center align-items-md-start justify-content-center justify-content-md-start flex-column text-center text-md-start gap-3 text-white p-4">
-                                        <small className='text-white d-flex align-items-center'><AiOutlineApple size={27} color='white' /> iPhone 14 Series</small>
-                                        <h3 className="fw-bold">Up to 10% off Voucher</h3>
-                                        <div className="time-left d-flex gap-3">
-                                            <div className="time-box ">
-                                                <p className=' fw-bold'>23</p>
-                                                <small className=''>HOURS</small>
-                                            </div>
-                                            <div className="time-box">
-                                                <p className='fw-bold'>07</p>
-                                                <small className=''>DAYS</small>
-                                            </div>
-                                            <div className="time-box">
-                                                <p className=' fw-bold'>29</p>
-                                                <small className=''>MINUTES</small>
-                                            </div>
-                                            <div className="time-box">
-                                                <p className=' fw-bold'>37</p>
-                                                <small className=''>SECONDS</small>
-                                            </div>
-                                        </div>
-                                        <button className='main-btn'>Buy Now</button>
-                                    </div>
-                                    <div className="slider-image">
-                                        <img src="../../Images/item7.png" alt="" />
-                                    </div>
-                                </div>
+                               
 
                                 <div className="d-flex align-items-center flex-column flex-md-row hero-slide bg-black text-white p-2">
                                     <div className="q-details d-flex align-items-center align-items-md-start justify-content-center justify-content-md-start flex-column text-center text-md-start gap-3  text-white p-4">
@@ -175,7 +148,7 @@ const Hero = () => {
                                         <button className='main-btn'>Buy Now</button>
                                     </div>
                                     <div className="slider-image">
-                                        <img src="../../Images/hero.png" alt="" />
+                                        <img src="../../Images/prod9.png" alt="" />
                                     </div>
                                 </div>
 
