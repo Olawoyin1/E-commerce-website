@@ -58,7 +58,7 @@ const Hero = () => {
                                         </div>
                                         <button className='main-btn'>Buy Now</button>
                                     </div>
-                                    <div className="q-image">
+                                    <div className="slider-image">
                                         <img src="../../Images/item8.png" alt="" />
                                     </div>
                                 </div>
@@ -87,7 +87,7 @@ const Hero = () => {
                                         </div>
                                         <button className='main-btn'>Buy Now</button>
                                     </div>
-                                    <div className="q-image">
+                                    <div className="slider-image">
                                         <img src="../../Images/hero.png" alt="" />
                                     </div>
                                 </div>
@@ -116,8 +116,8 @@ const Hero = () => {
                                         </div>
                                         <button className='main-btn'>Buy Now</button>
                                     </div>
-                                    <div className="q-image">
-                                        <img src="../../Images/hero.png" alt="" />
+                                    <div className="slider-image">
+                                        <img src="../../Images/prod9.png" alt="" />
                                     </div>
                                 </div>
 
@@ -145,8 +145,8 @@ const Hero = () => {
                                         </div>
                                         <button className='main-btn'>Buy Now</button>
                                     </div>
-                                    <div className="q-image">
-                                        <img src="../../Images/hero.png" alt="" />
+                                    <div className="slider-image">
+                                        <img src="../../Images/item7.png" alt="" />
                                     </div>
                                 </div>
 
@@ -174,7 +174,7 @@ const Hero = () => {
                                         </div>
                                         <button className='main-btn'>Buy Now</button>
                                     </div>
-                                    <div className="q-image">
+                                    <div className="slider-image">
                                         <img src="../../Images/hero.png" alt="" />
                                     </div>
                                 </div>

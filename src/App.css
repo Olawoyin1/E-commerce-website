@@ -123,6 +123,19 @@ header {
   overflow: hidden;
 }
 
+.slider-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 1rem; */
+  /* background-color: #db4444; */
+}
+
+.slider-image img{
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
 
 .hero-banner {
   min-height: 100%;
