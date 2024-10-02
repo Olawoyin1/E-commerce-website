@@ -55,17 +55,17 @@ const ShopComponent = () => {
         <div className="cat">
           <small className="ms-4 fw-bold cat-label">Categories</small>
         </div>
-        <div className="cat-header d-flex align-items-center justify-content-between">
-          <h3 className="fw-bold mt-2">Flash Sales</h3>
+        <div className="cat-header mt-3 d-flex align-items-center justify-content-between">
+          <h3 className="fw-bold ">Flash Sales</h3>
           <div className="d-flex align-items-center gap-2">
             <button 
                 className="round" 
                 onClick={() => slider?.current?.slickPrev()}
-            ><IoIosArrowRoundBack /></button>
+            ><IoIosArrowRoundBack size={20} /></button>
             <button 
                 onClick={() => slider?.current?.slickNext()}
                 className="round"
-            ><IoIosArrowRoundForward /></button>
+            ><IoIosArrowRoundForward size={20} /></button>
           </div>
         </div>
         <div className="all-items mt-3">
@@ -77,25 +77,27 @@ const ShopComponent = () => {
             >
               <Slider ref={slider} {...settings}>
 
-                <div className="item border">
+                <div className="item ">
                     {/* =======PRODUCT IMAGE STARTS HERE======= */}
-                  <div className="item-image d-flex align-items-center justify-content-center">
+                  <div className="item-image rounded d-flex align-items-center justify-content-center">
                     <img src="../../Images/Frame 612 (1).png" alt="" />
 
                     <small className="discount">-40%</small>
+
+                    <button className="add-to-cart">Add To Cart</button>
 
                     <div className="action d-flex flex-column gap-2">
                         <button className="round bg-white">
                             <CiHeart size={20} />
                         </button>
                         <button className="round bg-white">
-                        <IoEyeOutline />
+                        <IoEyeOutline size={20} />
                         </button>
                     </div>
                   </div>
 
                     {/* =======PRODUCT CONTENT STARTS HERE======= */}
-                  <div className="item-details p-2">
+                  <div className="item-details pt-2">
                     <small className="fw-bold">HAVIT HV-G92 Gamepad</small>
                     <div className="price d-flex align-items-center gap-3">
                         <small>$120</small>
