@@ -27,9 +27,9 @@ const Header = () => {
                         <input type="text" placeholder='What are you looking for?'/>
                         <CiSearch className='icon' />
                     </form>
-                    <Link to="/"><FaRegHeart size={20} /></Link>
-                    <Link to="/cart"><GrCart size={20}/></Link>
-                    <Link to="/user"><FiUser size={20} /></Link>
+                    <Link className='nav-link' to="/"><FaRegHeart size={20} /></Link>
+                    <Link className='nav-link' to="/cart"><GrCart size={20}/></Link>
+                    <Link className='nav-link' to="/user"><FiUser size={20} /></Link>
                 </div>
             </nav>
         </div>

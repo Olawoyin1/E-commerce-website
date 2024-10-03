@@ -197,6 +197,7 @@ header {
   background-color: #f5f5f5 !important; 
   position: relative;
   transition: 400ms ease-in-out;
+  overflow: hidden;
 }
 
 .item-image img{
@@ -244,8 +245,8 @@ header {
 
 /* ========Quick product section ======== */
 .time-box{
-  width: 3.8rem;
-  height: 3.8rem;
+  width: 3.4rem;
+  height: 3.2rem;
   display: flex;
   gap: 0;
   flex-direction: column;
@@ -253,6 +254,7 @@ header {
   align-items: center;
   justify-content: center;
   /* border-radius: 50%; */
+  color: #333333;
 }
 
 .time-box small{

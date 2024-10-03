@@ -27,19 +27,19 @@ const Footer = () => {
 
                 <div className='d-flex mt-3  flex-column gap-2'>
                     <h5 className="fw-bold">Account</h5>
-                    <Link className='nav-link' to="">My Account</Link>
-                    <Link className='nav-link' to="">Login / Register</Link>
-                    <Link className='nav-link' to="">Cart</Link>
-                    <Link className='nav-link' to="">Wishlist</Link>
-                    <Link className='nav-link' to="">Shop</Link>
+                    <Link className='nav-link' to="profile">My Account</Link>
+                    <Link className='nav-link' to="login">Login / Register</Link>
+                    <Link className='nav-link' to="cart">Cart</Link>
+                    <Link className='nav-link' to="wishist">Wishlist</Link>
+                    <Link className='nav-link' to="shop">Shop</Link>
                 </div>
 
                 <div className='d-flex mt-3 flex-column gap-2'>
                     <h5 className="fw-bold">Quick Link</h5>
-                    <Link className='nav-link' to="">Privacy Policy</Link>
-                    <Link className='nav-link' to="">Terms Of Use</Link>
-                    <Link className='nav-link' to="">FAQ</Link>
-                    <Link className='nav-link' to="">Contact</Link>
+                    <Link className='nav-link' to="/">Privacy Policy</Link>
+                    <Link className='nav-link' to="/">Terms Of Use</Link>
+                    <Link className='nav-link' to="/">FAQ</Link>
+                    <Link className='nav-link' to="contact">Contact</Link>
                 </div>
 
                 
