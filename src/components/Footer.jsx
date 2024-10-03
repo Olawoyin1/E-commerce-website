@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <div className='footer py-4'>
+    <div className='footer bg-black py-4'>
         <div className="container2">
             <div className="row row-cols-1 row-col-sm-2 row-cols-md-3 row-cols-lg-4 m-0">
-                <div className='d-flex flex-column gap-2'>
+                <div className='d-flex mt-3  flex-column gap-2'>
                     <h5 className="fw-bold">Exclusive</h5>
                     <p>Subscribe</p>
                     <small>Get 10% off your first order</small>
@@ -18,14 +18,14 @@ const Footer = () => {
                 </div>
 
 
-                <div className='d-flex flex-column gap-2'>
+                <div className='d-flex mt-3  flex-column gap-2'>
                     <h5 className="fw-bold">Support</h5>                    
                     <small>19 Ekemode street Oke-Oko Isawo Ikorodu Lagos State.</small>
                     <small>yustee2017@gmail.com</small>
                     <small>+234 8168 028 145</small>
                 </div>
 
-                <div className='d-flex flex-column gap-2'>
+                <div className='d-flex mt-3  flex-column gap-2'>
                     <h5 className="fw-bold">Account</h5>
                     <Link className='nav-link' to="">My Account</Link>
                     <Link className='nav-link' to="">Login / Register</Link>
@@ -34,7 +34,7 @@ const Footer = () => {
                     <Link className='nav-link' to="">Shop</Link>
                 </div>
 
-                <div className='d-flex flex-column gap-2'>
+                <div className='d-flex mt-3 flex-column gap-2'>
                     <h5 className="fw-bold">Quick Link</h5>
                     <Link className='nav-link' to="">Privacy Policy</Link>
                     <Link className='nav-link' to="">Terms Of Use</Link>
