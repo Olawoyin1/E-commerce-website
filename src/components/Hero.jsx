@@ -14,8 +14,8 @@ const Hero = () => {
         autoplaySpeed: 7000,
     };
   return (
-    <section className="hero">
-        <div className="container2">
+    <section className="hero p-0">
+        <div className="container3">
             <div className="row m-0">
                 <div className="col-md-3 d-none d-md-block p-0">
                     <ul className='p-0 m-0 pt-3 sidebar'>
@@ -29,8 +29,8 @@ const Hero = () => {
                         <li><a className='nav-link siderbar-link' href="/">Health & Beauty</a></li>
                     </ul>
                 </div>
-                <div className="col-md-9 mt-2">
-                    <div className="hero-banner">
+                <div className="col-md-9 mt-md-2 p-0 m-0">
+                    <div className="hero-banner m-0">
                         <div className="slider-container">
                             <Slider {...settings}>
 

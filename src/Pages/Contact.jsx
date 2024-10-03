@@ -8,7 +8,7 @@ const Contact = () => {
     <div className='contact py-4'>
         <div className="container2">
             <div className="row m-0 my-4">
-                <div className="col-md-4 rounded contact-info shadow-sm p-4 bg-white d-flex flex-column gap-2">
+                <div className="col-md-4  contact-info p-4  d-flex flex-column gap-2">
                     <small className='fw-bold'><SlCallOut /> Call To Us</small>
                     <small>We are available 24/7, 7 days a week.</small>
                     <small>Phone: +234 8168 028 145</small>
@@ -20,13 +20,13 @@ const Contact = () => {
                     <small>Emails: support@exclusive.com</small>
 
                 </div>
-                <div className="col-md-8">
-                    <form action="" className='shadow-sm bg-white rounded p-3'>
-                        <div className="row">
+                <div className="col-md-8 shadow-sm bg-white rounded">
+                    <form action="" className='   p-3'>
+                        <div className="row gap-3 gap-md-0">
                             <div className="col-md-4">
                                 <input type="text" className='rounded' placeholder='Your Name'/>
                             </div>
-                            <div className="col-md-4 p-0">
+                            <div className="col-md-4 p-md-0">
                                 <input type="email" className='rounded' placeholder='Your Email' />
                             </div>
                             <div className="col-md-4">

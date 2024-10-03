@@ -80,7 +80,7 @@ small{
 }
 
 .container3{
-  max-width: 60%;
+  max-width: 80%;
   margin: 0 auto !important;
 }
 
@@ -167,7 +167,7 @@ header {
   left: 0;
   top: 0;
   height: 100%;
-  width: 1rem;
+  width: 0.7rem;
   border-radius: 4px;
   background-color: #db4444;
 }
@@ -343,6 +343,9 @@ padding: 7px 1px;
   color: #ffffff !important;
 }
 
+.footer h5{
+  margin-bottom: 1rem !important;
+}
 
 
 /* ABOUT SECTION STYLE */
@@ -380,6 +383,10 @@ padding: 7px 1px;
   .container2{
     max-width: 90% !important;
   }
+  
+  .container3{
+    max-width: 100% !important;
+  }
 
   .slick-slide .hero-slide{
     /* height: 100%; */
@@ -393,4 +400,11 @@ padding: 7px 1px;
   
   
   
+}
+
+
+@media (max-width: 500px) {
+  .footer h5{
+    margin-bottom: 4px !important;
+  }
 }
