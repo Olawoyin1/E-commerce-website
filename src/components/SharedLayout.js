@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
+import Footer from "./Footer";
 
 const SharedLayout = ({ openNav, setOpenNav, modal, setModal }) => {
   return (
@@ -9,7 +10,7 @@ const SharedLayout = ({ openNav, setOpenNav, modal, setModal }) => {
     
       <Header />
       <Outlet />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

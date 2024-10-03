@@ -7,6 +7,8 @@ import SharedLayout from './components/SharedLayout.js';
 import Login from './Pages/Login.jsx';
 import Signup from './Pages/Signup.jsx';
 import Contact from './Pages/Contact.jsx';
+import ErrorPage from './Pages/ErrorPage.jsx';
+import About from './Pages/About.jsx';
 
 
 const main = createBrowserRouter(
@@ -14,9 +16,14 @@ const main = createBrowserRouter(
     <Route path="/" element={<SharedLayout />}>
       <Route index element={<Home />} />
 
-      {/* <Route path="author" element={<Author />} /> */}
+      <Route path="*" element={<ErrorPage />} />
+
       <Route path="contact" element={<Contact />} />
+
+      <Route path="about" element={<About />} />
+
       <Route path="signup" element={<Signup />} />
+
       <Route path="login" element={<Login />} />
       
       {/* <Route path="posts" element={<BlogLayout />}>

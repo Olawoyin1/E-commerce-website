@@ -1,6 +1,7 @@
 import React from 'react'
 import { SlCallOut } from "react-icons/sl";
 import { GoMail } from "react-icons/go";
+import { VscSend } from "react-icons/vsc";
 
 const Contact = () => {
   return (
@@ -33,7 +34,7 @@ const Contact = () => {
                             </div>
                         </div>
                         <textarea className='mt-3 rounded' placeholder='Your Message' name="" id=""></textarea>
-                        <button className='main-btn rounded mt-2'>Send Message</button>
+                        <button className='main-btn rounded mt-2'>Send Message <VscSend /></button>
                     </form>
                 </div>
             </div>

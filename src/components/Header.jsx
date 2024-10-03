@@ -1,7 +1,9 @@
 import React from 'react'
-import { CiHeart } from "react-icons/ci";
-import { CiShoppingCart } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
+import { FiUser } from "react-icons/fi";
+import { GrCart } from "react-icons/gr";
+import { FaRegHeart } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -15,18 +17,19 @@ const Header = () => {
 
                 <h3 className='fw-bold'>Exclusive</h3>
                 <ul className='d-none d-md-flex align-items-center gap-3 m-0 p-0'>
-                    <li><a className='nav-link' href="/">Home</a></li>
-                    <li><a className='nav-link' href="/contact">Contact</a></li>
-                    <li><a className='nav-link' href="/about">About</a></li>
-                    <li><a className='nav-link' href="/signup">Signup</a></li>
+                    <li><Link className='nav-link' to="/">Home</Link></li>
+                    <li><Link className='nav-link' to="/contact">Contact</Link></li>
+                    <li><Link className='nav-link' to="/about">About</Link></li>
+                    <li><Link className='nav-link' to="/signup">Signup</Link></li>
                 </ul>
-                <div className="others d-flex align-items-center gap-2">
+                <div className="others d-flex align-items-center gap-3">
                     <form action="" className='d-sm-block d-none header-search m-0'>
-                        <input type="text" />
+                        <input type="text" placeholder='What are you looking for?'/>
                         <CiSearch className='icon' />
                     </form>
-                    <CiHeart size={20} />
-                    <CiShoppingCart size={20} />
+                    <Link to="/"><FaRegHeart size={20} /></Link>
+                    <Link to="/cart"><GrCart size={20}/></Link>
+                    <Link to="/user"><FiUser size={20} /></Link>
                 </div>
             </nav>
         </div>
