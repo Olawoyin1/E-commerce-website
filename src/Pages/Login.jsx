@@ -8,7 +8,7 @@ const Login = () => {
       <div className="row m-0 h-user">
 
           <div className="col-md-6 p-0 reg-image">
-            <img src="../images/blog4.jpg" alt="" />
+            <img src="../images/sign.png" alt="" />
           </div>
 
 
@@ -16,7 +16,7 @@ const Login = () => {
               
                 <form action="" className="user-reg-form d-flex flex-column gap-2">
                   <div>
-                    <h4 className="fw-bold">Login To Blog</h4>
+                    <h4 className="fw-bold">Login To Exclusive</h4>
                     <small>Enter Your Details Below</small>
                   </div>
                   <input type="email" placeholder="Email" />
