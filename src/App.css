@@ -334,6 +334,18 @@ padding: 7px 1px;
 
 
 
+/* USER PAGE STYLE */
+.user input{
+  font-size: small;
+  outline: none;
+  border: none;
+  background-color: #fafafa;
+  padding: 10px;
+  display: block;
+  width: 100% !important;
+}
+
+
 /* ERROR STYLE */
 .error{
   min-height: 80vh;

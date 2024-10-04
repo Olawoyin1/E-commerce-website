@@ -10,6 +10,7 @@ import Contact from './Pages/Contact.jsx';
 import ErrorPage from './Pages/ErrorPage.jsx';
 import About from './Pages/About.jsx';
 import Posts from './Pages/Posts.jsx';
+import User from './Pages/User.jsx';
 
 
 const main = createBrowserRouter(
@@ -21,9 +22,11 @@ const main = createBrowserRouter(
 
       <Route path="contact" element={<Contact />} />
 
+      <Route path="user" element={<User />} />
+
       <Route path="about" element={<About />} />
 
-      <Route path="post" element={<Posts />} />
+      <Route path="shop" element={<Posts />} />
 
       <Route path="signup" element={<Signup />} />
 

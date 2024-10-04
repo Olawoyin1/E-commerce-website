@@ -20,14 +20,14 @@ const Hero = () => {
             <div className="row m-0">
                 <div className="col-md-3 d-none d-md-block p-0">
                     <ul className='p-0 m-0 pt-3 sidebar'>
-                        <li><Link className='nav-link siderbar-link' to="/post">Woman's Fashion</Link></li>
-                        <li><Link className='nav-link siderbar-link' to="/post">Men's Fashion</Link></li>
-                        <li><Link className='nav-link siderbar-link' to="/post">Electronics</Link></li>
-                        <li><Link className='nav-link siderbar-link' to="/post">Home & Lifestyle</Link></li>
-                        <li><Link className='nav-link siderbar-link' to="/post">Medicine</Link></li>
-                        <li><Link className='nav-link siderbar-link' to="/post">Sports & Outdoor</Link></li>
-                        <li><Link className='nav-link siderbar-link' to="/post">Baby's & Toys</Link></li>
-                        <li><Link className='nav-link siderbar-link' to="/post">Health & Beauty</Link></li>
+                        <li><Link className='nav-link siderbar-link' to="/shop">Woman's Fashion</Link></li>
+                        <li><Link className='nav-link siderbar-link' to="/shop">Men's Fashion</Link></li>
+                        <li><Link className='nav-link siderbar-link' to="/shop">Electronics</Link></li>
+                        <li><Link className='nav-link siderbar-link' to="/shop">Home & Lifestyle</Link></li>
+                        <li><Link className='nav-link siderbar-link' to="/shop">Medicine</Link></li>
+                        <li><Link className='nav-link siderbar-link' to="/shop">Sports & Outdoor</Link></li>
+                        <li><Link className='nav-link siderbar-link' to="/shop">Baby's & Toys</Link></li>
+                        <li><Link className='nav-link siderbar-link' to="/shop">Health & Beauty</Link></li>
                     </ul>
                 </div>
                 <div className="col-md-9 mt-md-2 p-0 m-0">
