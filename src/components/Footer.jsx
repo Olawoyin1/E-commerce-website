@@ -40,6 +40,7 @@ const Footer = () => {
                     <Link className='nav-link' to="/">Terms Of Use</Link>
                     <Link className='nav-link' to="/">FAQ</Link>
                     <Link className='nav-link' to="contact">Contact</Link>
+                    <Link className='nav-link' to="checkout">Checkout</Link>
                 </div>
 
           

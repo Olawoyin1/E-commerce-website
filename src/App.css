@@ -72,6 +72,12 @@ small{
 
 .nav-link{
   font-size: small !important;
+  transition: 300ms ease-in-out;
+}
+
+.nav-link:hover{
+  /* font-weight: bold; */
+  text-decoration: underline !important;
 }
 
 .container2{
@@ -334,6 +340,13 @@ padding: 7px 1px;
 
 
 
+
+/* =====User style ===== */
+.user {
+  background-color: #f5f5f5;
+}
+
+
 /* USER PAGE STYLE */
 .user input{
   font-size: small;
@@ -399,6 +412,28 @@ padding: 7px 1px;
 }
 
 
+
+/* ========CHECKOUT STYLING======== */
+.checkout input[type="text"]{
+  font-size: small;
+  outline: none;
+  border: none;
+  background-color: #fafafa;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  margin-top: 14px;
+}
+
+
+.check-details{
+  width: 340px;
+  /* background-color: red; */
+  max-width: 340px;
+}
+
+
+
 @media (max-width: 768px) {
   .container2{
     max-width: 90% !important;
@@ -426,5 +461,14 @@ padding: 7px 1px;
 @media (max-width: 500px) {
   .footer h5{
     margin-bottom: 4px !important;
+  }
+
+  .item-image{
+    height: 290px;
+    background-color: #f5f5f5 !important; 
+    position: relative;
+    transition: 400ms ease-in-out;
+    overflow: hidden;
+    /* padding: 1rem; */
   }
 }

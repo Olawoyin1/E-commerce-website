@@ -16,7 +16,7 @@ const Login = () => {
               
                 <form action="" className="user-reg-form d-flex flex-column gap-2">
                   <div>
-                    <h4 className="fw-bold">Login To Exclusive</h4>
+                    <h4 className="fw-bold">Login To E-Commerce</h4>
                     <small>Enter Your Details Below</small>
                   </div>
                   <input type="email" placeholder="Email" />

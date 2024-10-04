@@ -8,13 +8,14 @@ import { CiHeart } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
 import Data from "../Data";
 import { MdTrain } from "react-icons/md";
-// import Data from "../Data";
+
+import { GrCart } from "react-icons/gr";
 
 const ShopComponent = ({data,header , title}) => {
   const [display, setDisplay] = useState(true);
 
   const main = Data.filter(item=>item.category === header)
-  console.log(main);
+
 
   const settings = {
     dots: false,
@@ -98,7 +99,7 @@ const ShopComponent = ({data,header , title}) => {
                           {
                             item.discount ? (<small className="discount">-{item.discount}%</small>) : ""
                           }
-                          <button className="add-to-cart">Add To Cart</button>
+                          <button className="add-to-cart  align-items-center gap-2"><GrCart /> Add To Cart</button>
                           <div className="action d-flex flex-column gap-2">
                               <button className="round hover bg-white">
                                   <CiHeart size={20} />
