@@ -357,13 +357,19 @@ padding: 7px 1px;
   gap: 1.7rem;
 }
 
-.grid-item{
+
+.hover,
+.grid-item,
+.home-cat-item{
   transition: 400ms ease-in-out;
   color: #333333 !important;
 }
 
+
+.hover:hover,
+.home-cat-item:hover, 
 .grid-item:hover{
-  background-color: #db4444;
+  background-color: #db4444 !important;
   color: #ffffff !important;
 }
 

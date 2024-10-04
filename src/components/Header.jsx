@@ -15,7 +15,7 @@ const Header = () => {
         <div className="container2">
             <nav className='navbar m-0'>
 
-                <h3 className='fw-bold'>Exclusive</h3>
+                <Link to="/"><h3 className='fw-bold'>Exclusive</h3></Link>
                 <ul className='d-none d-md-flex align-items-center gap-3 m-0 p-0'>
                     <li><Link className='nav-link' to="/">Home</Link></li>
                     <li><Link className='nav-link' to="/contact">Contact</Link></li>

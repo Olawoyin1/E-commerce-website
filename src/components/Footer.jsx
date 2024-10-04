@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className='footer bg-black py-4'>
         <div className="container2">
-            <div className="row row-cols-1 row-col-sm-2 row-cols-md-3 row-cols-lg-4 m-0">
+            <div className="row row-cols-1 row-col-sm-2 row-cols-md-3 row-cols-lg-4 m-0 mb-3">
                 <div className='d-flex mt-3  flex-column gap-2'>
                     <h5 className="fw-bold">Exclusive</h5>
                     <p>Subscribe</p>
@@ -42,18 +42,10 @@ const Footer = () => {
                     <Link className='nav-link' to="contact">Contact</Link>
                 </div>
 
-                
-
-
-
-
           
-
-
-
-
-
-          
+            </div>
+            <div className="footer_end text-center pt-2 mt-4  border-top">
+                <small>© Copyright Olawoyin 2024. All right reserved</small>
             </div>
         </div>
     </div>

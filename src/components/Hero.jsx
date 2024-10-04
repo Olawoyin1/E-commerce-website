@@ -2,6 +2,7 @@ import React from 'react'
 import Slider from "react-slick";
 import { AiOutlineApple } from "react-icons/ai";
 import { PiMusicNotesSimple } from "react-icons/pi";
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     const settings = {
@@ -19,14 +20,14 @@ const Hero = () => {
             <div className="row m-0">
                 <div className="col-md-3 d-none d-md-block p-0">
                     <ul className='p-0 m-0 pt-3 sidebar'>
-                        <li><a className='nav-link siderbar-link' href="/">Woman's Fashion</a></li>
-                        <li><a className='nav-link siderbar-link' href="/">Men's Fashion</a></li>
-                        <li><a className='nav-link siderbar-link' href="/">Electronics</a></li>
-                        <li><a className='nav-link siderbar-link' href="/">Home & Lifestyle</a></li>
-                        <li><a className='nav-link siderbar-link' href="/">Medicine</a></li>
-                        <li><a className='nav-link siderbar-link' href="/">Sports & Outdoor</a></li>
-                        <li><a className='nav-link siderbar-link' href="/">Baby's & Toys</a></li>
-                        <li><a className='nav-link siderbar-link' href="/">Health & Beauty</a></li>
+                        <li><Link className='nav-link siderbar-link' to="/post">Woman's Fashion</Link></li>
+                        <li><Link className='nav-link siderbar-link' to="/post">Men's Fashion</Link></li>
+                        <li><Link className='nav-link siderbar-link' to="/post">Electronics</Link></li>
+                        <li><Link className='nav-link siderbar-link' to="/post">Home & Lifestyle</Link></li>
+                        <li><Link className='nav-link siderbar-link' to="/post">Medicine</Link></li>
+                        <li><Link className='nav-link siderbar-link' to="/post">Sports & Outdoor</Link></li>
+                        <li><Link className='nav-link siderbar-link' to="/post">Baby's & Toys</Link></li>
+                        <li><Link className='nav-link siderbar-link' to="/post">Health & Beauty</Link></li>
                     </ul>
                 </div>
                 <div className="col-md-9 mt-md-2 p-0 m-0">

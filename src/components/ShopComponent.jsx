@@ -6,10 +6,15 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
+import Data from "../Data";
+import { MdTrain } from "react-icons/md";
+// import Data from "../Data";
 
-const ShopComponent = ({data, header, title}) => {
+const ShopComponent = ({data,header , title}) => {
   const [display, setDisplay] = useState(true);
-  // const [width, setWidth] = useState(600);
+
+  const main = Data.filter(item=>item.category === header)
+  console.log(main);
 
   const settings = {
     dots: false,
@@ -50,6 +55,8 @@ const ShopComponent = ({data, header, title}) => {
 
   const slider = React.useRef(null);
   return (
+
+    
     <div className="my-5">
       <div className="container2">
         <div className="cat">
@@ -75,255 +82,56 @@ const ShopComponent = ({data, header, title}) => {
                 display: display ? "block" : "none",
               }}
             >
+
+              
+
               <Slider ref={slider} {...settings}>
 
-                <div className="item ">
+                {
+                  main.map(item => {
+                    return (
+                      <div key={item.id} className="item ">
                     {/* =======PRODUCT IMAGE STARTS HERE======= */}
-                  <div className="item-image rounded d-flex align-items-center justify-content-center">
-                    <img src="../../Images/item1.png" alt="" />
+                        <div className="item-image rounded d-flex align-items-center justify-content-center">
+                          <img src={item.image} alt="" />
 
-                    <small className="discount">-40%</small>
-                    <button className="add-to-cart">Add To Cart</button>
-                    <div className="action d-flex flex-column gap-2">
-                        <button className="round bg-white">
-                            <CiHeart size={20} />
-                        </button>
-                        <button className="round bg-white">
-                        <IoEyeOutline size={20} />
-                        </button>
-                    </div>
-                  </div>
+                          {
+                            item.discount ? (<small className="discount">-{item.discount}%</small>) : ""
+                          }
+                          <button className="add-to-cart">Add To Cart</button>
+                          <div className="action d-flex flex-column gap-2">
+                              <button className="round hover bg-white">
+                                  <CiHeart size={20} />
+                              </button>
+                              <button className="round hover bg-white">
+                              <IoEyeOutline size={20} />
+                              </button>
+                          </div>
+                        </div>
 
-                    {/* =======PRODUCT CONTENT STARTS HERE======= */}
-                  <div className="item-details pt-2">
-                    <small className="fw-bold">HAVIT HV-G92 Gamepad</small>
-                    <div className="price d-flex align-items-center gap-3">
-                        <small>$120</small>
-                        <small className="strike">$180</small>
-                    </div>
-                    <div className="star d-flex align-items-center gap-3">
-                        <img src="../../Images/stars.png" width={70} alt="" />
-                        <small>(77)</small>
-                    </div>
-                  </div>
-                </div>
+                          {/* =======PRODUCT CONTENT STARTS HERE======= */}
+                        <div className="item-details pt-2">
+                          <small className="fw-bold">{item.name}</small>
+                          <div className="price d-flex align-items-center gap-3">
+                              <small>${item.price}</small>
+                              <small className="strike">$180</small>
+                          </div>
+                          <div className="star d-flex align-items-center gap-3">
+                              <img src="../../Images/stars.png" width={70} alt="" />
+                              <small>({item.totalRating})</small>
+                          </div>
+                        </div>
+                      </div>
+                    )
+                  })
+                }
 
-                <div className="item ">
-                    {/* =======PRODUCT IMAGE STARTS HERE======= */}
-                  <div className="item-image rounded d-flex align-items-center justify-content-center">
-                    <img src="../../Images/item2.png" alt="" />
+               
 
-                    <small className="discount">-40%</small>
-                    <button className="add-to-cart">Add To Cart</button>
-                    <div className="action d-flex flex-column gap-2">
-                        <button className="round bg-white">
-                            <CiHeart size={20} />
-                        </button>
-                        <button className="round bg-white">
-                        <IoEyeOutline size={20} />
-                        </button>
-                    </div>
-                  </div>
 
-                    {/* =======PRODUCT CONTENT STARTS HERE======= */}
-                  <div className="item-details pt-2">
-                    <small className="fw-bold">HAVIT HV-G92 Gamepad</small>
-                    <div className="price d-flex align-items-center gap-3">
-                        <small>$120</small>
-                        <small className="strike">$180</small>
-                    </div>
-                    <div className="star d-flex align-items-center gap-3">
-                        <img src="../../Images/stars.png" width={70} alt="" />
-                        <small>(77)</small>
-                    </div>
-                  </div>
-                </div>
+                
+                
 
-                <div className="item ">
-                    {/* =======PRODUCT IMAGE STARTS HERE======= */}
-                  <div className="item-image rounded d-flex align-items-center justify-content-center">
-                    <img src="../../Images/item3.png" alt="" />
-
-                    <small className="discount">-40%</small>
-                    <button className="add-to-cart">Add To Cart</button>
-                    <div className="action d-flex flex-column gap-2">
-                        <button className="round bg-white">
-                            <CiHeart size={20} />
-                        </button>
-                        <button className="round bg-white">
-                        <IoEyeOutline size={20} />
-                        </button>
-                    </div>
-                  </div>
-
-                    {/* =======PRODUCT CONTENT STARTS HERE======= */}
-                  <div className="item-details pt-2">
-                    <small className="fw-bold">HAVIT HV-G92 Gamepad</small>
-                    <div className="price d-flex align-items-center gap-3">
-                        <small>$120</small>
-                        <small className="strike">$180</small>
-                    </div>
-                    <div className="star d-flex align-items-center gap-3">
-                        <img src="../../Images/stars.png" width={70} alt="" />
-                        <small>(77)</small>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="item ">
-                    {/* =======PRODUCT IMAGE STARTS HERE======= */}
-                  <div className="item-image rounded d-flex align-items-center justify-content-center">
-                    <img src="../../Images/item4.png" alt="" />
-
-                    <small className="discount">-40%</small>
-                    <button className="add-to-cart">Add To Cart</button>
-                    <div className="action d-flex flex-column gap-2">
-                        <button className="round bg-white">
-                            <CiHeart size={20} />
-                        </button>
-                        <button className="round bg-white">
-                        <IoEyeOutline size={20} />
-                        </button>
-                    </div>
-                  </div>
-
-                    {/* =======PRODUCT CONTENT STARTS HERE======= */}
-                  <div className="item-details pt-2">
-                    <small className="fw-bold">HAVIT HV-G92 Gamepad</small>
-                    <div className="price d-flex align-items-center gap-3">
-                        <small>$120</small>
-                        <small className="strike">$180</small>
-                    </div>
-                    <div className="star d-flex align-items-center gap-3">
-                        <img src="../../Images/stars.png" width={70} alt="" />
-                        <small>(77)</small>
-                    </div>
-                  </div>
-                </div>                
-
-                <div className="item ">
-                    {/* =======PRODUCT IMAGE STARTS HERE======= */}
-                  <div className="item-image rounded d-flex align-items-center justify-content-center">
-                    <img src="../../Images/item5.png" alt="" />
-
-                    <small className="discount">-40%</small>
-                    <button className="add-to-cart">Add To Cart</button>
-                    <div className="action d-flex flex-column gap-2">
-                        <button className="round bg-white">
-                            <CiHeart size={20} />
-                        </button>
-                        <button className="round bg-white">
-                        <IoEyeOutline size={20} />
-                        </button>
-                    </div>
-                  </div>
-
-                    {/* =======PRODUCT CONTENT STARTS HERE======= */}
-                  <div className="item-details pt-2">
-                    <small className="fw-bold">HAVIT HV-G92 Gamepad</small>
-                    <div className="price d-flex align-items-center gap-3">
-                        <small>$120</small>
-                        <small className="strike">$180</small>
-                    </div>
-                    <div className="star d-flex align-items-center gap-3">
-                        <img src="../../Images/stars.png" width={70} alt="" />
-                        <small>(77)</small>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="item ">
-                    {/* =======PRODUCT IMAGE STARTS HERE======= */}
-                  <div className="item-image rounded d-flex align-items-center justify-content-center">
-                    <img src="../../Images/item6.png" alt="" />
-
-                    <small className="discount">-40%</small>
-                    <button className="add-to-cart">Add To Cart</button>
-                    <div className="action d-flex flex-column gap-2">
-                        <button className="round bg-white">
-                            <CiHeart size={20} />
-                        </button>
-                        <button className="round bg-white">
-                        <IoEyeOutline size={20} />
-                        </button>
-                    </div>
-                  </div>
-
-                    {/* =======PRODUCT CONTENT STARTS HERE======= */}
-                  <div className="item-details pt-2">
-                    <small className="fw-bold">HAVIT HV-G92 Gamepad</small>
-                    <div className="price d-flex align-items-center gap-3">
-                        <small>$120</small>
-                        <small className="strike">$180</small>
-                    </div>
-                    <div className="star d-flex align-items-center gap-3">
-                        <img src="../../Images/stars.png" width={70} alt="" />
-                        <small>(77)</small>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="item ">
-                    {/* =======PRODUCT IMAGE STARTS HERE======= */}
-                  <div className="item-image rounded d-flex align-items-center justify-content-center">
-                    <img src="../../Images/item7.png" alt="" />
-
-                    <small className="discount">-40%</small>
-                    <button className="add-to-cart">Add To Cart</button>
-                    <div className="action d-flex flex-column gap-2">
-                        <button className="round bg-white">
-                            <CiHeart size={20} />
-                        </button>
-                        <button className="round bg-white">
-                        <IoEyeOutline size={20} />
-                        </button>
-                    </div>
-                  </div>
-
-                    {/* =======PRODUCT CONTENT STARTS HERE======= */}
-                  <div className="item-details pt-2">
-                    <small className="fw-bold">HAVIT HV-G92 Gamepad</small>
-                    <div className="price d-flex align-items-center gap-3">
-                        <small>$120</small>
-                        <small className="strike">$180</small>
-                    </div>
-                    <div className="star d-flex align-items-center gap-3">
-                        <img src="../../Images/stars.png" width={70} alt="" />
-                        <small>(77)</small>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="item ">
-                    {/* =======PRODUCT IMAGE STARTS HERE======= */}
-                  <div className="item-image rounded d-flex align-items-center justify-content-center">
-                    <img src="../../Images/item8.png" alt="" />
-
-                    <small className="discount">-40%</small>
-                    <button className="add-to-cart">Add To Cart</button>
-                    <div className="action d-flex flex-column gap-2">
-                        <button className="round bg-white">
-                            <CiHeart size={20} />
-                        </button>
-                        <button className="round bg-white">
-                        <IoEyeOutline size={20} />
-                        </button>
-                    </div>
-                  </div>
-
-                    {/* =======PRODUCT CONTENT STARTS HERE======= */}
-                  <div className="item-details pt-2">
-                    <small className="fw-bold">HAVIT HV-G92 Gamepad</small>
-                    <div className="price d-flex align-items-center gap-3">
-                        <small>$120</small>
-                        <small className="strike">$180</small>
-                    </div>
-                    <div className="star d-flex align-items-center gap-3">
-                        <img src="../../Images/stars.png" width={70} alt="" />
-                        <small>(77)</small>
-                    </div>
-                  </div>
-                </div>
                
               </Slider>
             </div>

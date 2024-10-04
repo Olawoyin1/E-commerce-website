@@ -3,16 +3,21 @@ import Hero from '../components/Hero'
 import ShopComponent from '../components/ShopComponent'
 import Quick from '../components/Quick'
 import Category from '../components/Category'
+import Data from '../Data'
 
 const Home = () => {
+
+  const Today = Data.filter(item => item.category === "Today's")
+
   return (
     <div>
         <Hero />
         <ShopComponent
-            header={"Today's"}
-            title={"Flash Sales"}
+          header={"Today's"}
+          title={"Flash Sales"}
+          data={Today}
         />
-
+      
         <Category />
 
         <ShopComponent
