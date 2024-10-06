@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaRegHeart } from "react-icons/fa6";
+import ShopComponent from '../components/ShopComponent';
 
 
 const ProductDetail = () => {
@@ -38,7 +39,12 @@ const ProductDetail = () => {
                     </div>
                 </div>
             </div>
+
         </div>
+        <ShopComponent 
+            header={"Home & Lifestyle"}
+            title={"Featured"}
+        />
     </div>
   )
 }
