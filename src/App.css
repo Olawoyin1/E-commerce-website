@@ -428,10 +428,18 @@ padding: 7px 1px;
 
 .check-details{
   width: 340px;
-  /* background-color: red; */
-  max-width: 340px;
 }
 
+
+/* ========CART STYLING======== */
+
+
+.cart input[type="number"]{
+  width: 3rem !important;
+  padding: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+}
 
 
 @media (max-width: 768px) {
@@ -452,6 +460,13 @@ padding: 7px 1px;
   .item-image:hover .add-to-cart{
     display: none !important;
   }
+
+  .check-details{
+    width: 100%;
+    /* background-color: red; */
+    /* max-width: 340px; */
+  }
+  
   
   
   

@@ -94,7 +94,7 @@ const ShopComponent = ({data,header , title}) => {
                       <div key={item.id} className="item ">
                     {/* =======PRODUCT IMAGE STARTS HERE======= */}
                         <div className="item-image rounded d-flex align-items-center justify-content-center">
-                          <img src={item.image} alt="" />
+                          <img src={item.image} loading="lazy" alt="" />
 
                           {
                             item.discount ? (<small className="discount">-{item.discount}%</small>) : ""

@@ -8,8 +8,9 @@ const Footer = () => {
         <div className="container2">
             <div className="row row-cols-1 row-col-sm-2 row-cols-md-3 row-cols-lg-4 m-0 mb-3">
                 <div className='d-flex mt-3  flex-column gap-2'>
-                    <h5 className="fw-bold">Exclusive</h5>
+                    <h5 className="fw-bold">E-commerce</h5>
                     <p>Subscribe</p>
+                    <small>Download Our App</small>
                     <small>Get 10% off your first order</small>
                     <form action="" className='d-sm-block d-none header-search m-0'>
                         <input type="email" placeholder='Enter your email'/>

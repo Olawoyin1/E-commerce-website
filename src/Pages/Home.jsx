@@ -4,6 +4,7 @@ import ShopComponent from '../components/ShopComponent'
 import Quick from '../components/Quick'
 import Category from '../components/Category'
 import Data from '../Data'
+import Featured from '../components/Featured'
 
 const Home = () => {
 
@@ -26,6 +27,7 @@ const Home = () => {
         />
 
         <Quick />
+        <Featured />
     </div>
   )
 }

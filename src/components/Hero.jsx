@@ -60,7 +60,7 @@ const Hero = () => {
                                         <button className='main-btn'>Buy Now</button>
                                     </div>
                                     <div className="slider-image">
-                                        <img src="../../Images/item8.png" alt="" />
+                                        <img src="../../Images/item8.png" alt="" loading='lazy' />
                                     </div>
                                 </div>
 
@@ -89,7 +89,7 @@ const Hero = () => {
                                         <button className='main-btn'>Buy Now</button>
                                     </div>
                                     <div className="slider-image">
-                                        <img src="../../Images/hero.png" alt="" />
+                                        <img src="../../Images/hero.png" alt="" loading='lazy' />
                                     </div>
                                 </div>
 
@@ -118,7 +118,7 @@ const Hero = () => {
                                         <button className='main-btn'>Buy Now</button>
                                     </div>
                                     <div className="slider-image">
-                                        <img src="../../Images/prod9.png" alt="" />
+                                        <img src="../../Images/prod9.png" alt="" loading='lazy'/>
                                     </div>
                                 </div>
 
@@ -149,7 +149,7 @@ const Hero = () => {
                                         <button className='main-btn'>Buy Now</button>
                                     </div>
                                     <div className="slider-image">
-                                        <img src="../../Images/prod9.png" alt="" />
+                                        <img src="../../Images/prod9.png" alt="" loading='lazy'/>
                                     </div>
                                 </div>
 

@@ -12,6 +12,7 @@ import About from './Pages/About.jsx';
 import Posts from './Pages/Posts.jsx';
 import User from './Pages/User.jsx';
 import Checkout from './Pages/Checkout.jsx';
+import Cart from './Pages/Cart.jsx';
 
 
 const main = createBrowserRouter(
@@ -21,8 +22,10 @@ const main = createBrowserRouter(
 
       <Route path="*" element={<ErrorPage />} />
 
-      <Route path="checkout" element={<Checkout />} />
+      <Route path="cart" element={<Cart />} />
 
+      <Route path="checkout" element={<Checkout />} />
+      
       <Route path="contact" element={<Contact />} />
 
       <Route path="user" element={<User />} />
