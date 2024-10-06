@@ -7,7 +7,7 @@ const ErrorPage = () => {
         <div className="container2">
             <div className="error d-flex align-items-center justify-content-center flex-column gap-3">
                 <h1 className='fw-bold'>404 Not Found</h1>
-                <p>Your visited page not found. You may go home page.</p>
+                <p className='text-center'>Your visited page not found. You may go home page.</p>
                 <Link to="/" className='main-btn'>Back to home page</Link>
             </div>
         </div>

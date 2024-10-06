@@ -64,7 +64,7 @@ const Checkout = () => {
                     </div>
                     <form action="" className='d-flex p-0 m-0 align-content-center gap-2'>
                         <input className='mt-0 border rounded' placeholder='Coupon Code' type="text" />
-                        <button className="main-btn rounded">Apply Coupon</button>
+                        <button className="main-btn w-100 rounded">Apply Coupon</button>
                     </form>
                     <button className='main-btn rounded'>Place Order</button>
 

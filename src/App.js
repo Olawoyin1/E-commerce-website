@@ -13,6 +13,9 @@ import Posts from './Pages/Posts.jsx';
 import User from './Pages/User.jsx';
 import Checkout from './Pages/Checkout.jsx';
 import Cart from './Pages/Cart.jsx';
+import WishList from './Pages/WishList.jsx';
+import ProductDetail from './Pages/ProductDetail.jsx';
+import ShopLayout from './components/ShopLayout.js';
 
 
 const main = createBrowserRouter(
@@ -23,6 +26,10 @@ const main = createBrowserRouter(
       <Route path="*" element={<ErrorPage />} />
 
       <Route path="cart" element={<Cart />} />
+
+      <Route path="wishlist" element={<WishList />} />
+
+      <Route path="product-detail" element={<ProductDetail />} />
 
       <Route path="checkout" element={<Checkout />} />
       
@@ -38,15 +45,15 @@ const main = createBrowserRouter(
 
       <Route path="login" element={<Login />} />
       
-      {/* <Route path="posts" element={<BlogLayout />}>
+      <Route path="shop" element={<ShopLayout />}>
         <Route
           index
           element={
-            <Blog  />
+            <Posts  />
           }
         />
-        <Route path=":id" element={<SinglePost />} />
-      </Route> */}
+        <Route path=":id" element={<ProductDetail />} />
+      </Route>
     </Route>
   )
 );
