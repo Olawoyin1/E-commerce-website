@@ -4,7 +4,7 @@ import ShopComponent from '../components/ShopComponent.jsx'
 const Posts = () => {
   return (
     <div>
-        <div className="container2">
+        <div className="">
             <ShopComponent 
                 header={"Men's Clothing"}
                 title={"Trending"}

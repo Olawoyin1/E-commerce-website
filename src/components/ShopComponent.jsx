@@ -10,12 +10,21 @@ import Data from "../Data";
 import { MdTrain } from "react-icons/md";
 
 import { GrCart } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
-const ShopComponent = ({data,header , title}) => {
+const ShopComponent = ({data,header , title, liked, setLiked}) => {
   const [display, setDisplay] = useState(true);
 
   const main = Data.filter(item=>item.category === header)
 
+
+  const addLiked = (id) => {
+    const newItem = Data.filter(item => item.id === id);
+    console.log(newItem);
+    setLiked([...liked, newItem]);
+    console.log("Item ID:", id);
+    // You can add any functionality here, like updating state
+  };
 
   const settings = {
     dots: false,
@@ -101,7 +110,7 @@ const ShopComponent = ({data,header , title}) => {
                           }
                           <button className="add-to-cart  align-items-center gap-2"><GrCart /> Add To Cart</button>
                           <div className="action d-flex flex-column gap-2">
-                              <button className="round hover bg-white">
+                              <button className="round hover bg-white" onClick={() => addLiked(item.id)}>
                                   <CiHeart size={20} />
                               </button>
                               <button className="round hover bg-white">
@@ -112,10 +121,14 @@ const ShopComponent = ({data,header , title}) => {
 
                           {/* =======PRODUCT CONTENT STARTS HERE======= */}
                         <div className="item-details pt-2">
-                          <small className="fw-bold">{item.name}</small>
+                          <Link to={`/shop/${item.name}`} className="fw-bolder nav-link">{item.name}</Link>
                           <div className="price d-flex align-items-center gap-3">
-                              <small>${item.price}</small>
-                              <small className="strike">$180</small>
+                            
+                              <small className={item.discount ? "strike" : ""}>${item.price}</small>
+                              {
+                                item.discount ? <small className="">${`${item.price - item.discount/100 * item.price}`}</small> : ""
+                              }
+                              
                           </div>
                           <div className="star d-flex align-items-center gap-3">
                               <img src="../../Images/stars.png" width={70} alt="" />

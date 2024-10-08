@@ -28,11 +28,11 @@ const Footer = () => {
 
                 <div className='d-flex mt-3  flex-column gap-2'>
                     <h5 className="fw-bold">Account</h5>
-                    <Link className='nav-link' to="profile">My Account</Link>
-                    <Link className='nav-link' to="login">Login / Register</Link>
-                    <Link className='nav-link' to="cart">Cart</Link>
-                    <Link className='nav-link' to="wishist">Wishlist</Link>
-                    <Link className='nav-link' to="shop">Shop</Link>
+                    <Link className='nav-link' to="/user">My Account</Link>
+                    <Link className='nav-link' to="/login">Login / Register</Link>
+                    <Link className='nav-link' to="/cart">Cart</Link>
+                    <Link className='nav-link' to="/wishlist">Wishlist</Link>
+                    <Link className='nav-link' to="/shop">Shop</Link>
                 </div>
 
                 <div className='d-flex mt-3 flex-column gap-2'>
@@ -40,8 +40,8 @@ const Footer = () => {
                     <Link className='nav-link' to="/">Privacy Policy</Link>
                     <Link className='nav-link' to="/">Terms Of Use</Link>
                     <Link className='nav-link' to="/">FAQ</Link>
-                    <Link className='nav-link' to="contact">Contact</Link>
-                    <Link className='nav-link' to="checkout">Checkout</Link>
+                    <Link className='nav-link' to="/contact">Contact</Link>
+                    <Link className='nav-link' to="/checkout">Checkout</Link>
                 </div>
 
           

@@ -104,9 +104,9 @@ const About = () => {
             </div>
 
 
-            <Featured />
 
         </div>
+            <Featured />
     </div>
   )
 }

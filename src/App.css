@@ -21,6 +21,10 @@
   
 }
 
+.user-reg{
+  background-color: #f5f5f5;
+}
+
 body{
   
   color: #333333;
@@ -165,6 +169,10 @@ header {
 /* ======== SHOP COMPONENT SECTION======== */
 .cat{
   position: relative;
+}
+
+.strike{
+  text-decoration: line-through !important;
 }
 
 .cat::after{

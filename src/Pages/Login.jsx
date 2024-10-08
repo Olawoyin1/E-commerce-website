@@ -21,8 +21,8 @@ const Login = () => {
                   </div>
                   <input type="email" placeholder="Email" />
                   <input type="password" placeholder="Password" />
-                  <button className="mt-2">Login</button>
-                  <small>Not Created an Account yet? <Link to="/register">Signup</Link></small>
+                  <button className="mt-2 main-btn">Login</button>
+                  <small>Not Created an Account yet? <Link to="/signup">Signup</Link></small>
                 </form>
             </div>
       </div>

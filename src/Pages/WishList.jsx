@@ -1,23 +1,21 @@
 import React from 'react'
 import ShopComponent from '../components/ShopComponent'
 
-const WishList = () => {
+const WishList = ({liked, setLiked}) => {
   return (
     <div>
-        <div className="container2">
-            <ShopComponent 
-                header={"Men's Clothing"}
-                title={"Trending"}
-            />
-            <ShopComponent 
-                header={"Women's Clothing"}
-                title={"This Month"}
-            />
-            <ShopComponent 
-                header={"Home & Lifestyle"}
-                title={"Featured"}
-            />
-        </div>
+        <ShopComponent 
+            header={"Men's Clothing"}
+            title={"Trending"}
+        />
+        <ShopComponent 
+            header={"Women's Clothing"}
+            title={"This Month"}
+        />
+        <ShopComponent 
+            header={"Home & Lifestyle"}
+            title={"Featured"}
+        />
     </div>
   )
 }

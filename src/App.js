@@ -16,49 +16,64 @@ import Cart from './Pages/Cart.jsx';
 import WishList from './Pages/WishList.jsx';
 import ProductDetail from './Pages/ProductDetail.jsx';
 import ShopLayout from './components/ShopLayout.js';
+import { useState } from 'react';
+import ShopComponent from './components/ShopComponent.jsx';
 
 
-const main = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<SharedLayout />}>
-      <Route index element={<Home />} />
 
-      <Route path="*" element={<ErrorPage />} />
 
-      <Route path="cart" element={<Cart />} />
-
-      <Route path="wishlist" element={<WishList />} />
-
-      <Route path="product-detail" element={<ProductDetail />} />
-
-      <Route path="checkout" element={<Checkout />} />
-      
-      <Route path="contact" element={<Contact />} />
-
-      <Route path="user" element={<User />} />
-
-      <Route path="about" element={<About />} />
-
-      <Route path="shop" element={<Posts />} />
-
-      <Route path="signup" element={<Signup />} />
-
-      <Route path="login" element={<Login />} />
-      
-      <Route path="shop" element={<ShopLayout />}>
-        <Route
-          index
-          element={
-            <Posts  />
-          }
-        />
-        <Route path=":id" element={<ProductDetail />} />
-      </Route>
-    </Route>
-  )
-);
 
 function App() {
+
+  const [liked, setLiked] = useState([]);
+  
+
+  // console.log(liked);
+
+
+  const main = createBrowserRouter(
+    createRoutesFromElements(
+      
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<Home liked={liked} setLiked={setLiked} />} />
+  
+        <Route path="*" element={<ErrorPage />} />
+  
+        <Route path="cart" element={<Cart liked={liked} setLiked={setLiked} />} />
+  
+        <Route path="wishlist" element={<WishList liked={liked} setLiked={setLiked} />} />
+  
+        <Route path="product-detail" element={<ProductDetail />} />
+
+        <Route path="shop-component" element={<ShopComponent liked={liked} setLiked={setLiked} />} />
+  
+        <Route path="checkout" element={<Checkout />} />
+        
+        <Route path="contact" element={<Contact />} />
+  
+        <Route path="user" element={<User />} />
+  
+        <Route path="about" element={<About />} />
+  
+        <Route path="shop" element={<Posts liked={liked} setLiked={setLiked}/>} />
+  
+        <Route path="signup" element={<Signup />} />
+  
+        <Route path="login" element={<Login />} />
+        
+        <Route path="shop" element={<ShopLayout />}>
+          <Route
+            index
+            element={
+              <Posts liked={liked} setLiked={setLiked} />
+            }
+          />
+          <Route path=":name" element={<ProductDetail />} />
+        </Route>
+      </Route>
+    )
+  );
+  
   return <RouterProvider router={main} />;
 }
 

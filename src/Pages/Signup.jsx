@@ -22,8 +22,8 @@ const Signup = () => {
                     <input type="text" placeholder="Username" />
                     <input type="email" placeholder="Email" />
                     <input type="password" placeholder="Password" />
-                    <button className="mt-2">Create Account</button>
-                    <button>Sign up with Google</button>
+                    <button className="mt-2 main-btn">Create Account</button>
+                    <button className='main-btn bg-dark-subtle text-dark'>Sign up with Google</button>
                     <small>Already have an acount? <Link to="/login">Login</Link></small>
                 </form> 
                  
