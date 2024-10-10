@@ -7,14 +7,17 @@ const WishList = ({liked, setLiked}) => {
         <ShopComponent 
             header={"Men's Clothing"}
             title={"Trending"}
+            liked={liked} setLiked={setLiked}
         />
         <ShopComponent 
             header={"Women's Clothing"}
             title={"This Month"}
+            liked={liked} setLiked={setLiked}
         />
         <ShopComponent 
             header={"Home & Lifestyle"}
             title={"Featured"}
+            liked={liked} setLiked={setLiked}
         />
     </div>
   )

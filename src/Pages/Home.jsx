@@ -3,27 +3,30 @@ import Hero from '../components/Hero'
 import ShopComponent from '../components/ShopComponent'
 import Quick from '../components/Quick'
 import Category from '../components/Category'
-import Data from '../Data'
 import Featured from '../components/Featured'
 
-const Home = () => {
-
-  const Today = Data.filter(item => item.category === "Today's")
+const Home = ({liked, setLiked, slider}) => {
 
   return (
     <div>
         <Hero />
+          
         <ShopComponent
+          title={"Flash Sales"} 
           header={"Today's"}
-          title={"Flash Sales"}
-          data={Today}
+          liked={liked} 
+          setLiked={setLiked}
+          search={"Today's"}
         />
       
         <Category />
 
         <ShopComponent
+            search={"Trending"}
             header={"Trending"}
             title={"Best Selling Products"}
+            liked={liked} 
+            setLiked={setLiked}
         />
 
         <Quick />

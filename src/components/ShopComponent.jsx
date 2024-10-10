@@ -1,29 +1,31 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { IoIosArrowRoundForward } from "react-icons/io";
-import { IoIosArrowRoundBack } from "react-icons/io";
+// import { IoIosArrowRoundForward } from "react-icons/io";
+// import { IoIosArrowRoundBack } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
 import Data from "../Data";
-import { MdTrain } from "react-icons/md";
+import { FaHeart } from "react-icons/fa";
+// import { MdTrain } from "react-icons/md";
 
 import { GrCart } from "react-icons/gr";
 import { Link } from "react-router-dom";
+import ShopHeader from "./ShopHeader";
 
-const ShopComponent = ({data,header , title, liked, setLiked}) => {
-  const [display, setDisplay] = useState(true);
+const ShopComponent = ({data, search, header, title, liked, setLiked}) => {
 
-  const main = Data.filter(item=>item.category === header)
+  const main = Data.filter(item=>item.category === search)
+
+  const slider = React.useRef(null);
 
 
   const addLiked = (id) => {
-    const newItem = Data.filter(item => item.id === id);
-    console.log(newItem);
-    setLiked([...liked, newItem]);
-    console.log("Item ID:", id);
-    // You can add any functionality here, like updating state
+    const newItem = Data.filter(item => item.id === id)[0];
+    if (Array.isArray(liked)) {
+      setLiked([...liked, newItem]); 
+    } else {
+      console.error("Liked is not an array:", liked);
+    }
   };
 
   const settings = {
@@ -63,37 +65,19 @@ const ShopComponent = ({data,header , title, liked, setLiked}) => {
       ]
   };
 
-  const slider = React.useRef(null);
   return (
-
     
     <div className="my-5">
       <div className="container2">
-        <div className="cat">
-          <small className="ms-4 fw-bold cat-label">{header}</small>
-        </div>
-        <div className="cat-header mt-3 d-flex align-items-center justify-content-between">
-          <h3 className="fw-bold ">{title}</h3>
-          <div className="d-flex align-items-center gap-2">
-            <button 
-                className="round" 
-                onClick={() => slider?.current?.slickPrev()}
-            ><IoIosArrowRoundBack size={20} /></button>
-            <button 
-                onClick={() => slider?.current?.slickNext()}
-                className="round"
-            ><IoIosArrowRoundForward size={20} /></button>
-          </div>
-        </div>
+        <ShopHeader
+          header={header}
+          title={title}
+          slider={slider}
+        />
         <div className="all-items mt-3">
           <div className="slider-container">
-            <div
-              style={{
-                display: display ? "block" : "none",
-              }}
-            >
+            <div>
 
-              
 
               <Slider ref={slider} {...settings}>
 
@@ -111,8 +95,11 @@ const ShopComponent = ({data,header , title, liked, setLiked}) => {
                           <button className="add-to-cart  align-items-center gap-2"><GrCart /> Add To Cart</button>
                           <div className="action d-flex flex-column gap-2">
                               <button className="round hover bg-white" onClick={() => addLiked(item.id)}>
-                                  <CiHeart size={20} />
+                                  <CiHeart size={20} color="red" />
                               </button>
+                              {/* <button className="round hover bg-white" onClick={() => addLiked(item.id)}>
+                                  <FaHeart size={20} lightingColor="black" color="white" />
+                              </button> */}
                               <button className="round hover bg-white">
                               <IoEyeOutline size={20} />
                               </button>
