@@ -4,29 +4,35 @@ import ShopComponent from '../components/ShopComponent'
 import Quick from '../components/Quick'
 import Category from '../components/Category'
 import Featured from '../components/Featured'
+// import Data from '../Data'
 
-const Home = ({liked, setLiked, slider}) => {
+const Home = ({liked, setLiked, today, trending}) => {
+
+  
+  
 
   return (
     <div>
         <Hero />
-          
+
+      
+           
         <ShopComponent
           title={"Flash Sales"} 
           header={"Today's"}
           liked={liked} 
           setLiked={setLiked}
-          search={"Today's"}
+          data={today}
         />
-      
+         
         <Category />
 
         <ShopComponent
-            search={"Trending"}
-            header={"Trending"}
-            title={"Best Selling Products"}
-            liked={liked} 
-            setLiked={setLiked}
+          title={"Best Selling Products"} 
+          header={"Trending"}
+          liked={liked} 
+          setLiked={setLiked}
+          data={trending}
         />
 
         <Quick />

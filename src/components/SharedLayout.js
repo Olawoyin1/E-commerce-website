@@ -3,12 +3,12 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const SharedLayout = ({ openNav, setOpenNav, modal, setModal }) => {
+const SharedLayout = ({ count, setOpenNav, modal, setModal }) => {
   return (
     <>
 
     
-      <Header />
+      <Header count={count} />
       <Outlet />
       <Footer />
     </>

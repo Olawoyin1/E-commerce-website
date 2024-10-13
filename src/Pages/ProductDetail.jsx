@@ -6,7 +6,7 @@ import Data from "../Data";
 import { TbTruckDelivery } from "react-icons/tb";
 import { BsArrowRepeat } from "react-icons/bs";
 
-const ProductDetail = () => {
+const ProductDetail = ({liked, setLiked}) => {
   const { name } = useParams();
 
   const [count, setCount] = useState(0)
@@ -22,13 +22,16 @@ const ProductDetail = () => {
   // console.log(name);
 
   const data = Data.filter((item) => item.name === name);
+  const cat = Data.filter((item) => item.category === "Today's");
+ 
+  
 
   return (
     <div className="product-details my-5">
       <div className="container2">
         {data.map((item) => {
           return (
-            <div className="d-flex gap-4 flex-md-row flex-column">
+            <div key={item.id} className="d-flex gap-4 flex-md-row flex-column">
                 <div className="prod-image rounded d-flex align-content-center justify-content-center p-3 w-100">
                 <img src={item.image} alt="" />
               </div>
@@ -95,7 +98,16 @@ const ProductDetail = () => {
           );
         })}
       </div>
-      <ShopComponent header={"Home & Lifestyle"} title={"Featured"} />
+      {
+
+      }
+      <ShopComponent 
+        header={"Related Items"} 
+        title={"Featured"} 
+        liked={liked}
+        setLiked={setLiked}
+        data={cat}
+      />
     </div>
   );
 };

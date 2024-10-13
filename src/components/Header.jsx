@@ -5,7 +5,9 @@ import { GrCart } from "react-icons/gr";
 import { FaRegHeart } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({count}) => {
+console.log(count);
+
   return (
     <header>
         <div className="sales p-1 bg-dark text-center">
@@ -27,7 +29,7 @@ const Header = () => {
                         <input type="text" placeholder='What are you looking for?'/>
                         <CiSearch className='icon' />
                     </form>
-                    <Link className='nav-link' to="/wishlist"><FaRegHeart size={20} /></Link>
+                    <Link className='nav-link liked' to="/wishlist"><FaRegHeart size={20} /><span className={count ? "likedd" : ""}>{count > 0 ? count : ""}</span></Link>
                     <Link className='nav-link' to="/cart"><GrCart size={20}/></Link>
                     <Link className='nav-link' to="/user"><FiUser size={20} /></Link>
                 </div>
