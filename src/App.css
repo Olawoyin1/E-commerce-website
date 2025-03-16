@@ -128,13 +128,22 @@ small{
   border: none;
   border-radius: 4px;
   font-size: small;
-  width: 200px;
+  width: 220px;
   background-color: #f5f5f5;
+}
+
+.loading-p{
+  min-height: 400px;
 }
 
 .icon{
   position: absolute;
   right: 5.3px;
+  top: 5.7px;
+}
+
+.icon2{
+  right: 1.58rem;
   top: 5.7px;
 }
 

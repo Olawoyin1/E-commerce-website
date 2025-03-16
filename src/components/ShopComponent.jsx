@@ -143,7 +143,7 @@ const ShopComponent = ({ data, search, header, title, liked, setLiked }) => {
                           <small>({item.totalRating})</small>
                         </div>
                       </div>
-                    </div>
+                  </div>
                 ))
               ) : (
                 <div  className="item">

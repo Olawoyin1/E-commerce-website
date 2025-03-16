@@ -31,9 +31,12 @@ import Data from "./Data.js";
 
 function App() {
   const [liked, setLiked] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
   const count = liked.length;
 
-  console.log(liked)
+  console.log(searchQuery)
+
+  // console.log(liked)
   
   const today = Data.filter((item)=> item.category === "Today's")
   const trending = Data.filter((item)=> item.category === "Trending")
@@ -43,7 +46,7 @@ function App() {
 
   const main = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<SharedLayout count={count} />}>
+      <Route path="/" element={<SharedLayout count={count} setSearchQuery={setSearchQuery} />}>
         <Route index element={<Home 
           liked={liked} 
           setLiked={setLiked} 
@@ -79,17 +82,22 @@ function App() {
 
         <Route path="about" element={<About />} />
 
-        <Route
-          path="shop"
-          element={<Posts liked={liked} setLiked={setLiked} />}
-        />
+        
 
         <Route path="signup" element={<Signup />} />
 
         <Route path="login" element={<Login />} />
 
         <Route path="shop" element={<ShopLayout />}>
-          <Route index element={<Posts liked={liked} setLiked={setLiked} />} />
+          <Route index element={<Posts 
+            liked={liked} 
+            setLiked={setLiked}
+            trending={trending}
+            mCloth={mCloth}
+            posts={Data}
+            wCloth={wCloth}
+            searchQuery={searchQuery}
+          />} />
           <Route path=":name" element={<ProductDetail 
             liked={liked}
             setLiked={setLiked}
