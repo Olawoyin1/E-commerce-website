@@ -132,6 +132,14 @@ small{
   background-color: #f5f5f5;
 }
 
+.search-input2{
+  /* border: 2px solid red !important; */
+  display: block;
+  width: 100% !important;
+  padding: 10px !important;
+  margin-bottom: 1rem !important;
+}
+
 .loading-p{
   min-height: 400px;
 }
@@ -145,6 +153,16 @@ small{
 .icon2{
   right: 1.58rem;
   top: 5.7px;
+}
+
+.icon3{
+  right: 1.58rem;
+  top: 0.7rem;
+}
+
+.icon4{
+  right: 0.28rem;
+  top: 0.7rem; 
 }
 
 header {

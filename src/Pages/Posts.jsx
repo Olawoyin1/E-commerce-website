@@ -31,8 +31,7 @@ const Posts = ({ posts, liked, setLiked, searchQuery }) => {
   
   const filteredPosts = filterPosts(posts);
 
-  console.log(searchQuery)
-  console.log(filteredPosts)
+  
 
 
   // Group posts by category

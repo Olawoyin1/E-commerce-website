@@ -77,7 +77,7 @@ const navigate = useNavigate();
           </ul>
           <div className="others d-flex align-items-center gap-3">
             {/* Search Box */}
-            <div className="d-flex align-items-center header-search">
+            <div className="d-md-flex d-none  align-items-center header-search">
               <input
                 type="text"
                 value={searchText}
@@ -113,6 +113,30 @@ const navigate = useNavigate();
             </Link>
           </div>
         </nav>
+        <div className="d-flex align-items-center header-search">
+              <input
+                type="text"
+                value={searchText}
+                onChange={(e) => setSearchText(e.target.value)}
+                onKeyDown={handleSearch}
+                // value={searchText}
+                // onChange={handleSearch}
+                className="search-input2"
+                placeholder="What are you looking for?"
+              />
+              {/* Microphone Button */}
+              <button
+                type="button"
+                onClick={isListening ? stopListening : startListening}
+                className="mic-btn"
+              >
+                {isListening ? <CiMicrophoneOff size={17} className="icon icon3" /> : <CiMicrophoneOn size={17}  className="icon icon3"/>}
+              </button>
+              {/* Search Icon Button */}
+              <button type="button" onClick={handleVoiceSearch} className="search-btn">
+                <FiSearch size={17} className="icon icon4" />
+              </button>
+            </div>
       </div>
     </header>
   );
