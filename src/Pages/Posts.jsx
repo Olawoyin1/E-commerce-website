@@ -21,13 +21,35 @@ const Posts = ({ posts, liked, setLiked, searchQuery }) => {
   // const filteredPosts = filterPosts(posts);
 
 
+  // const filterPosts = (posts) => {
+  //   if (!searchQuery.trim()) return posts; // Show all posts if no search query
+  
+  //   return posts.filter((post) =>
+  //     post.name.toLowerCase().includes(searchQuery.toLowerCase())
+  //   );
+  // };
+
   const filterPosts = (posts) => {
     if (!searchQuery.trim()) return posts; // Show all posts if no search query
   
-    return posts.filter((post) =>
-      post.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    // Define common stopwords to ignore
+    const stopwords = new Set(["i", "need", "a", "the", "is", "to", "for", "and", "of"]);
+  
+    // Convert search query into an array of meaningful words
+    const searchWords = searchQuery
+      .toLowerCase()
+      .split(" ")
+      .filter((word) => !stopwords.has(word)); // Remove stopwords
+  
+    if (searchWords.length === 0) return posts; // Prevent empty search issues
+  
+    return posts.filter((post) => {
+      const productName = post.name.toLowerCase();
+      return searchWords.some((word) => productName.includes(word));
+    });
   };
+  
+  
   
   const filteredPosts = filterPosts(posts);
 
