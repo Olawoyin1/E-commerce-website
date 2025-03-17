@@ -34,9 +34,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const count = liked.length;
 
-  console.log(searchQuery)
-
-  // console.log(liked)
+  
   
   const today = Data.filter((item)=> item.category === "Today's")
   const trending = Data.filter((item)=> item.category === "Trending")
