@@ -136,7 +136,7 @@ small{
   /* border: 2px solid red !important; */
   display: block;
   width: 100% !important;
-  padding: 10px !important;
+  padding: 1rem !important;
   margin-bottom: 1rem !important;
 }
 
@@ -156,12 +156,12 @@ small{
 }
 
 .icon3{
-  right: 1.58rem;
+  right: 2.58rem;
   top: 0.7rem;
 }
 
 .icon4{
-  right: 0.28rem;
+  right: 0.8rem;
   top: 0.7rem; 
 }
 

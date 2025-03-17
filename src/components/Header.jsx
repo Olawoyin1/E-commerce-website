@@ -9,7 +9,7 @@ import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognitio
 const Header = ({ count, setSearchQuery }) => {
 
 const navigate = useNavigate(); 
-  const { transcript, listening, browserSupportsSpeechRecognition } =
+  const { transcript, listening, browserSupportsSpeechRecognition, resetTranscript } =
     useSpeechRecognition();
 
   const [searchText, setSearchText] = useState("");
@@ -28,6 +28,9 @@ const navigate = useNavigate();
     }, [transcript, setSearchQuery]);
 
   const startListening = () => {
+    setSearchText("");
+    SpeechRecognition.stopListening(); // Ensure any ongoing session is stopped
+    resetTranscript(); 
     setIsListening(true);
     SpeechRecognition.startListening({ continuous: true, language: "en-US" });
   };
@@ -77,7 +80,7 @@ const navigate = useNavigate();
           </ul>
           <div className="others d-flex align-items-center gap-3">
             {/* Search Box */}
-            <div className="d-md-flex d-none  align-items-center header-search">
+            <div className="d-lg-flex d-none  align-items-center header-search">
               <input
                 type="text"
                 value={searchText}
@@ -113,7 +116,11 @@ const navigate = useNavigate();
             </Link>
           </div>
         </nav>
-        <div className="d-flex align-items-center header-search">
+
+
+
+        {/* mobile view search */}
+        <div className="d-lg-none d-flex align-items-center header-search">
               <input
                 type="text"
                 value={searchText}
@@ -130,11 +137,11 @@ const navigate = useNavigate();
                 onClick={isListening ? stopListening : startListening}
                 className="mic-btn"
               >
-                {isListening ? <CiMicrophoneOff size={17} className="icon icon3" /> : <CiMicrophoneOn size={17}  className="icon icon3"/>}
+                {isListening ? <CiMicrophoneOff size={24} color="#000000" className="icon icon3" /> : <CiMicrophoneOn size={24}  className="icon icon3"/>}
               </button>
               {/* Search Icon Button */}
               <button type="button" onClick={handleVoiceSearch} className="search-btn">
-                <FiSearch size={17} className="icon icon4" />
+                <FiSearch size={24} color="#000000" className="icon icon4" />
               </button>
             </div>
       </div>
